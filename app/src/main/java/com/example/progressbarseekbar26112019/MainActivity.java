@@ -1,6 +1,7 @@
 package com.example.progressbarseekbar26112019;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.arch.core.util.Function;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -50,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
 //        countDownTimer.start();
         mSb.setOnSeekBarChangeListener(onSeekbarchange());
         mSb2.setOnSeekBarChangeListener(onSeekbarchange());
+        insochinhphuong();
+//        showNumber(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, new Callback() {
+//            @Override
+//            public Integer doubleNumber(Integer number) {
+//                return number * number;
+//            }
+//        });
     }
     private OnSeekBarChangeListener onSeekbarchange(){
         return new SeekBar.OnSeekBarChangeListener() {
@@ -71,5 +79,43 @@ public class MainActivity extends AppCompatActivity {
             }
         };
     }
-
+//
+//    private void showNumber(int[] arraynumber, Callback fn ){
+//        for (Integer value : arraynumber){
+//           Log.d("BBB",fn.doubleNumber(value) + "");
+//        }
+//    }
+    // 1 - 100 :
+    // task 1 : so chan
+    // task 2 : so le
+    // task 3 : so chia 3 du 1
+    // task 4 : so chinh phuong ( can bac 2)
+    private void insochan(){
+        for (int i = 1 ; i <= 100 ; i++){
+            if (i % 2 == 0){
+                Log.d("BBB",i + "");
+            }
+        }
+    }
+    private void insole(){
+        for (int i = 1 ; i <= 100 ; i++){
+            if (i % 2 == 1){
+                Log.d("BBB",i + "");
+            }
+        }
+    }
+    private void insochia3du1(){
+        for (int i = 1 ; i <= 100 ; i++){
+            if (i % 3 == 1){
+                Log.d("BBB",i + "");
+            }
+        }
+    }
+    private void insochinhphuong(){
+        for (int i = 1 ; i <= 100 ; i++){
+            if (Math.sqrt(i) % 1 == 0){
+                Log.d("BBB",i + "");
+            }
+        }
+    }
 }
