@@ -51,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
 //        countDownTimer.start();
         mSb.setOnSeekBarChangeListener(onSeekbarchange());
         mSb2.setOnSeekBarChangeListener(onSeekbarchange());
-        insochinhphuong();
+        inso(new CallbackResult() {
+            @Override
+            public boolean isShowing(int number) {
+                return number % 2 == 0;
+            }
+        });
 //        showNumber(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, new Callback() {
 //            @Override
 //            public Integer doubleNumber(Integer number) {
@@ -114,6 +119,14 @@ public class MainActivity extends AppCompatActivity {
     private void insochinhphuong(){
         for (int i = 1 ; i <= 100 ; i++){
             if (Math.sqrt(i) % 1 == 0){
+                Log.d("BBB",i + "");
+            }
+        }
+    }
+    private void inso(CallbackResult result){
+        for (int i = 1 ; i <= 100 ; i++){
+            boolean dk = result.isShowing(i);
+            if(dk){
                 Log.d("BBB",i + "");
             }
         }
