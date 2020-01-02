@@ -29,5 +29,18 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        };
 //        countDownTimer.start();
+        // Demo2 : Down load
+        CountDownTimer countDownTimer = new CountDownTimer(10000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                mProgressBar.setProgress(mProgressBar.getProgress() + 10);
+            }
+
+            @Override
+            public void onFinish() {
+                mProgressBar.setProgress(mProgressBar.getProgress() + 10);
+            }
+        };
+        countDownTimer.start();
     }
 }
