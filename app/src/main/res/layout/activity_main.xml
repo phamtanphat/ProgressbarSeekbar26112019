@@ -7,11 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ProgressBar
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:id="@+id/progressbar"
+<!--    <ProgressBar-->
+<!--        style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+<!--        android:id="@+id/progressbar"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+    <SeekBar
+        android:id="@+id/seekbar"
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="?attr/actionBarSize"/>
+    <SeekBar
+        android:layout_below="@id/seekbar"
+        android:id="@+id/seekbar2"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
 </RelativeLayout>
